@@ -2,10 +2,11 @@
   "name": "back",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.ts"
+    "start": "nodemon",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
