@@ -1,4 +1,3 @@
-const exp = require("constants");
 const express = require("express");
 const serveIndex = require("serve-index");
 
