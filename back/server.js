@@ -1,3 +1,4 @@
+const exp = require("constants");
 const express = require("express");
 const serveIndex = require("serve-index");
 
@@ -9,7 +10,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(serveIndex("."));
+app.use(express.static("."));
+app.use(serveIndex(".", { icons: true }));
+
+app.get("/api/date", (req, res) => {
+  res.json({
+    date: new Date(),
+  });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
