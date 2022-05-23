@@ -1,0 +1,20 @@
+@import "src/scss/variables.scss";
+
+form {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5em;
+  width: 100%;
+  max-width: 25em;
+
+  input {
+    padding: 0.5em 1em;
+    width: 100%;
+    border: 0.1em solid #bbb;
+    border-radius: $border-radius;
+  }
+
+  button {
+    margin-top: 3em;
+  }
+}
