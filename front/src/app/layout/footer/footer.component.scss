@@ -1,0 +1,26 @@
+footer {
+  height: 3em;
+  background-color: #eee;
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    text-decoration: inherit;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      font-size: 0.6em;
+    }
+  }
+}
