@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/normalize.css/normalize.css";
+
 body {
-  margin: 0;
-  line-height: 1.5;
   font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-rendering: optimizeLegibility;
 }
