@@ -25,12 +25,12 @@ export class StockComponent implements OnInit {
 
   async refresh() {
     await this.articleService.refresh();
+    this.selectedArticles.clear;
   }
 
   toggle(article: Article) {
     if (this.selectedArticles.has(article)) {
       this.selectedArticles.delete(article);
-      return;
     } else {
       this.selectedArticles.add(article);
     }
