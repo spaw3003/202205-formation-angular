@@ -29,7 +29,7 @@ export class ArticleService {
     return JSON.parse(listeArticles);
   }
 
-  refresh() {
+  async refresh() {
     this.articles = this.getArticles();
   }
 
