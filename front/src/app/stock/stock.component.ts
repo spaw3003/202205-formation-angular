@@ -30,9 +30,10 @@ export class StockComponent implements OnInit {
     try {
       this.isRefreshing = true;
       await this.articleService.refresh();
-      this.isRefreshing = false;
       this.selectedArticles.clear;
     } catch (err) {
+      console.log('erreur : ', err);
+    } finally {
       this.isRefreshing = false;
     }
   }

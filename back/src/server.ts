@@ -17,9 +17,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/api", api);
+
 app.use(express.static("."));
 app.use(serveIndex(".", { icons: true }));
-app.use("/api", api);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
