@@ -28,6 +28,11 @@ export class StockComponent implements OnInit {
     this.selectedArticles.clear;
   }
 
+  async delete() {
+    await this.articleService.delete(this.selectedArticles);
+    this.selectedArticles.clear;
+  }
+
   toggle(article: Article) {
     if (this.selectedArticles.has(article)) {
       this.selectedArticles.delete(article);

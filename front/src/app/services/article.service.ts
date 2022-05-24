@@ -33,7 +33,14 @@ export class ArticleService {
     this.articles = this.getArticles();
   }
 
-  save() {
+  async delete(selectedArticles: Set<Article>) {
+    this.articles = this.articles.filter(
+      (article) => !selectedArticles.has(article)
+    );
+    this.save();
+  }
+
+  async save() {
     localStorage.setItem(CLE_STORAGE_ARTICLES, JSON.stringify(this.articles));
   }
 }
