@@ -20,4 +20,8 @@ export class StockComponent implements OnInit {
   constructor(public articleService: ArticleService) {}
 
   ngOnInit(): void {}
+
+  async refresh() {
+    await this.articleService.refresh();
+  }
 }

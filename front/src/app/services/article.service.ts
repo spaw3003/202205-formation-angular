@@ -11,6 +11,10 @@ export class ArticleService {
 
   constructor() {}
 
+  async add(article: Article) {
+    this.articles.push(article);
+  }
+
   getArticles() {
     const listeArticles = localStorage.getItem(CLE_STORAGE_ARTICLES);
     if (listeArticles === null) {
@@ -25,8 +29,8 @@ export class ArticleService {
     return JSON.parse(listeArticles);
   }
 
-  async add(article: Article) {
-    this.articles.push(article);
+  refresh() {
+    this.articles = this.getArticles();
   }
 
   save() {
