@@ -21,7 +21,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let a of articles">
+        <tr *ngFor="let a of articleService.articles">
           <td class="name">{{ a.name }}</td>
           <td align="center" class="price">{{ a.price }} €</td>
           <td align="center" class="qty">{{ a.qty }}</td>
