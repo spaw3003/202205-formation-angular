@@ -1,6 +1,6 @@
 <main>
   <h1>Ajouter un article</h1>
-  <form [formGroup]="formGroup">
+  <form [formGroup]="formGroup" (ngSubmit)="submit()">
     <label>
       <div>Nom</div>
       <input type="text" formControlName="name" placeholder="Ex: Tournevis" />
