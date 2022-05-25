@@ -6,3 +6,13 @@ export const articles: Article[] = [
   { id: '2', name: 'Scie', price: 3.99, qty: 15 },
   { id: '3', name: 'Pelle', price: 24.99, qty: 18 },
 ];
+
+export const article1: Article = {
+  id: '4',
+  name: 'Clef anglaise',
+  price: 14.99,
+  qty: 18,
+};
+
+export const sleep = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
