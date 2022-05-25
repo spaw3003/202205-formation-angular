@@ -24,10 +24,26 @@ export class HttpArticleService extends ArticleService {
   }
 
   override async add(article: Article): Promise<void> {
-    super.add(article);
+    await super.add(article);
 
     await lastValueFrom(
       this.http.post<void>(URL_ARTICLE, article).pipe(delay(2000))
+    );
+  }
+
+  override async delete(selectedArticles: Set<Article>): Promise<void> {
+    await super.delete(selectedArticles);
+
+    const idArticles = [...selectedArticles].map((article) => article.id);
+    console.log('idArticles: ', idArticles);
+
+    await lastValueFrom(
+      this.http
+        .delete(URL_ARTICLE, {
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(idArticles),
+        })
+        .pipe(delay(1500))
     );
   }
 }

@@ -30,7 +30,7 @@ export class StockComponent implements OnInit {
     try {
       this.isRefreshing = true;
       await this.articleService.refresh();
-      this.selectedArticles.clear;
+      this.selectedArticles.clear();
     } catch (err) {
       console.log('erreur : ', err);
     } finally {
@@ -40,7 +40,7 @@ export class StockComponent implements OnInit {
 
   async delete() {
     await this.articleService.delete(this.selectedArticles);
-    this.selectedArticles.clear;
+    this.selectedArticles.clear();
   }
 
   toggle(article: Article) {

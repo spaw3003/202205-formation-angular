@@ -32,7 +32,8 @@ export class ArticleService {
     this.articles = this.articles.filter(
       (article) => !selectedArticles.has(article)
     );
-    this.save();
+    await this.save();
+    this.refresh();
   }
 
   async save() {

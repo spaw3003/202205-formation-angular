@@ -13,7 +13,13 @@
       <div>Quantité</div>
       <input type="number" step="1" min="0" formControlName="qty" />
     </label>
-    <button>Ajouter</button>
+    <button>
+      <fa-icon
+        [icon]="isAdding ? faSpinner : faPlus"
+        [spin]="isAdding"
+      ></fa-icon>
+      Ajouter
+    </button>
   </form>
 
   <!-- {{ formGroup.value | json }} -->
