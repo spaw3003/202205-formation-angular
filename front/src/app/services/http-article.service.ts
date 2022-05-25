@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Article } from '../interfaces/article';
 import { delay, lastValueFrom } from 'rxjs';
 
-const URL_ARTICLE = 'http://localhost:3000/api/articles';
+export const URL_ARTICLE = 'http://localhost:3000/api/articles';
 
 @Injectable({
   providedIn: 'root',
