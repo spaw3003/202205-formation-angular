@@ -35,7 +35,6 @@ export class HttpArticleService extends ArticleService {
     await super.delete(selectedArticles);
 
     const idArticles = [...selectedArticles].map((article) => article.id);
-    console.log('idArticles: ', idArticles);
 
     await lastValueFrom(
       this.http

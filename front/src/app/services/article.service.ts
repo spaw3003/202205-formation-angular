@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Article } from '../interfaces/article';
 
-const CLE_STORAGE_ARTICLES = 'articles';
+export const CLE_STORAGE_ARTICLES = 'articles';
 
 @Injectable({
   providedIn: 'root',
@@ -33,7 +33,6 @@ export class ArticleService {
       (article) => !selectedArticles.has(article)
     );
     await this.save();
-    this.refresh();
   }
 
   async save() {
